@@ -17,10 +17,16 @@ public slots:
     void openFile();
     void send();
     void startTransfer();
-    void updateClientProgress(qint64);
+    void updateClientProgress(qint64 x);
     void displayError(QAbstractSocket::SocketError);
-    void openBtnClicked();
-    void sendBtnClicked();
 private:
     Ui::QtWidgetsApplication1Class ui;
+    QTcpSocket* tcpClient;
+    QFile* localFile;
+    qint64 totalBytes;
+    qint64 bytesWritten;
+    qint64 bytesToWrite;
+    qint64 payloadSize;
+    QString fileName;
+    QByteArray outBlock;
 };
