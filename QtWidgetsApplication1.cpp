@@ -11,6 +11,7 @@ QtWidgetsApplication1::QtWidgetsApplication1(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
+    setWindowTitle(QString::fromUtf8("计算机网络课设，发送端"));
     ui.label->setText("主机号：");
     ui.label_2->setText("端口号：");
     ui.label_3->setText("未打开文件");
@@ -53,7 +54,6 @@ void QtWidgetsApplication1::startTransfer()
     QDataStream sendOut(&outBlock, QIODevice::WriteOnly);
     sendOut.setVersion(QDataStream::Qt_5_7);
     QString currentFileName = fileName.right(fileName.size() - fileName.lastIndexOf('/') - 1);
-    //文件总大小、文件名大小、文件名
     qDebug() << currentFileName;
     sendOut << qint64(0) << qint64(0) << currentFileName;
     totalBytes += outBlock.size();

@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>QtWidgetsApplication1</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="QtWidgetsApplication1.qrc">
+    <normaloff>:/QtWidgetsApplication1/logo.ico</normaloff>:/QtWidgetsApplication1/logo.ico</iconset>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -112,16 +119,6 @@
      <string>PushButton</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>600</width>
-     <height>23</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
